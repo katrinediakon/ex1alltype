@@ -20,7 +20,7 @@ $this->setFrameMode(true);
 <?=$arResult["NAME"]?>, <?=$arResult["DISPLAY_ACTIVE_FROM"]?> г., <?=$arResult["PROPERTIES"]["POSITION"]["VALUE"]?>, <?=$arResult["PROPERTIES"]["COMPANY"]["VALUE"]?>
 </div>
 </div>
-	<?if(isset($arResult["DETAIL_PICTURE"])):?>
+	<?if(isset($arItem["DETAIL_PICTURE"])):?>
 <div style="clear: both;" class="review-img-wrap"><img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="img"></div>
 <?else:?>
 <div style="clear: both;" class="review-img-wrap"><img src="<?=SITE_TEMPLATE_PATH?>/img/no_photo.jpg" alt="img"></div>
