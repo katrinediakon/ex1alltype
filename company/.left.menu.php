@@ -4,7 +4,7 @@ $aMenuLinks = Array(
 		"О компании", 
 		"./", 
 		Array(), 
-		Array(), 
+		Array("TEXT"=>"тут текст"), 
 		"" 
 	),
 	Array(
@@ -31,13 +31,6 @@ $aMenuLinks = Array(
 	Array(
 		"Вакансии", 
 		"vacancies.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"test", 
-		"/company/test.php", 
 		Array(), 
 		Array(), 
 		"" 
