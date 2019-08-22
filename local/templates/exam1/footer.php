@@ -101,14 +101,25 @@
 <nav class="main-menu">
 <div class="item">
 <div class="title-block">О магазине</div>
-<ul>
-    <li><a href="">Отзывы</a>
-    </li>
-    <li><a href="">Руководство </a>
-    </li>
-    <li><a href="">История</a>
-    </li>
-</ul>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"bottom", 
+	array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"COMPONENT_TEMPLATE" => "bottom",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "bottom",
+		"USE_EXT" => "N"
+	),
+	false
+);?>
 </div>
 <div class="item">
 <div class="title-block">Каталог товаров</div>
@@ -140,7 +151,15 @@
 <div class="title-block"><?=GetMessage('INFO')?></div>
 <div class="loc-block">
 <div class="address">ул. Летняя, стр.12, офис 512</div>
-<div class="phone"><a href="tel:84952128506">8 (495) 212-85-06</a>
+<div class="phone"><a href="tel:84952128506"><?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "page",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => ""
+	)
+);?></a>
 </div>
 </div>
 <div class="main-soc-block">
