@@ -2,11 +2,12 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("test");
 ?><?$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb",
-	".default",
+	"bitrix:main.include",
+	"",
 	Array(
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0"
+		"AREA_FILE_RECURSIVE" => "Y",
+		"AREA_FILE_SHOW" => "sect",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => ""
 	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
