@@ -32,6 +32,7 @@ $APPLICATION->SetTitle("Отзывы");
 			0 => "POSITION",
 			1 => "COMPANY",
 			2 => "DOC",
+			3 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",

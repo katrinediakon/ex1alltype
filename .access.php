@@ -1,7 +1,9 @@
 <?
+$PERM["oprosy"]["6"]="X";
+$PERM["services"]["6"]="X";
+$PERM["services"]["5"]="W";
 $PERM["search"]["5"]="W";
 $PERM["products"]["5"]="W";
-$PERM["services"]["5"]="W";
 $PERM["news"]["5"]="W";
 $PERM["contacts"]["5"]="W";
 $PERM["company"]["5"]="W";
