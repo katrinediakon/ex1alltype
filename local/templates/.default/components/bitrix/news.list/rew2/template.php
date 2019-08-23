@@ -21,13 +21,14 @@ $this->setFrameMode(true);
   <div class="title">
     <div class="photo-block">
 			<?if(isset($arItem["PREVIEW_PICTURE"])):?>
-			  <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="">
+    <?$renderImage = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], Array("width" => 50, "height" => 50), BX_RESIZE_IMAGE_EXACT, false);?>
+			  <img src="<?=$renderImage["src"]?>" alt="">
 
 			<?else:?>
 			  <img src="<?=SITE_TEMPLATE_PATH?>/img/no_photo.jpg" alt="">
 
 			<?endif?>
-      <img src="<?=SITE_TEMPLATE_PATH?>/img/side-opin.jpg" alt="">
+
     </div>
     <div class="name-block"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a></div>
     <div class="pos-block"><?=$arItem["PROPERTIES"]["POSITION"]["VALUE"]?>, <?=$arItem["PROPERTIES"]["COMPANY"]["VALUE"]?></div>
