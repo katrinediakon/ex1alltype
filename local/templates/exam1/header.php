@@ -33,7 +33,7 @@ IncludeTemplateLangFile(__FILE__);
 	<title><?$APPLICATION->ShowTitle()?></title>
 </head>
 <body>
-<?$adr=$dir = $APPLICATION->GetCurDir();?>
+<?$adr=$dir = $APPLICATION->GetCurPage();?>
     <div class="wrap">
 	<div id="panel"><?$APPLICATION->ShowPanel();?></div>
   <div class="wrap">
@@ -62,8 +62,8 @@ IncludeTemplateLangFile(__FILE__);
                   </form>
                   <nav class="menu-block">
 										<?$APPLICATION->IncludeComponent(
-	"bitrix:system.auth.form", 
-	"auth", 
+	"bitrix:system.auth.form",
+	"auth",
 	array(
 		"FORGOT_PASSWORD_URL" => "/login/vosstanovlenie-parolya.php",
 		"PROFILE_URL" => "/login/user.php",
@@ -109,14 +109,16 @@ IncludeTemplateLangFile(__FILE__);
       <div class="breadcrumbs-box">
           <div class="inner-wrap">
 						<?$APPLICATION->IncludeComponent(
-							"bitrix:breadcrumb",
-							".default",
-							Array(
-								"PATH" => "",
-								"SITE_ID" => "s1",
-								"START_FROM" => "0"
-							)
-						);?>
+	"bitrix:breadcrumb",
+	".default",
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?>
           </div>
       </div>
       <?endif?>

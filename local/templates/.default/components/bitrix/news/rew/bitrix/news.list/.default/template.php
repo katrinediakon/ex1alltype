@@ -34,7 +34,7 @@ $this->setFrameMode(true);
 				</div>
 				<?if(isset($arItem["DETAIL_PICTURE"])):?>
 				  <?$renderImage = CFile::ResizeImageGet($arItem["DETAIL_PICTURE"], Array("width" => 68, "height" => 50), BX_RESIZE_IMAGE_EXACT, false);?>
-				<div class="review-img-wrap"><a href="#"><img src="<?=$renderImage ["src"]?>" alt="img"></a></div>
+				<div class="review-img-wrap"><a href="#"><img src="<?=$renderImage["src"]?>" alt="img"></a></div>
 				<?else:?>
 				<div class="review-img-wrap"><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/no_photo.jpg" alt="img"></a></div>
 				<?endif?>

@@ -21,25 +21,17 @@
 	)
 );?>
 
-<?if(file_exists("sect_inc.php")):?>
 
 
-<div class="side-block side-anonse">
-    <div class="title-block"><span class="i i-title01"></span>Полезная информация!</div>
-    <div class="item">
-            <?$APPLICATION->IncludeComponent(
-      "bitrix:main.include",
-      "",
-      Array(
-        "AREA_FILE_RECURSIVE" => "Y",
-        "AREA_FILE_SHOW" => "sect",
-        "AREA_FILE_SUFFIX" => "inc",
-        "EDIT_TEMPLATE" => ""
-      )
-      );?>
-    </div>
-</div>
-<?endif?>
+            <?$APPLICATION->IncludeComponent("bitrix:main.include", "template1", Array(
+	"AREA_FILE_RECURSIVE" => "Y",	// Рекурсивное подключение включаемых областей разделов
+		"AREA_FILE_SHOW" => "sect",	// Показывать включаемую область
+		"AREA_FILE_SUFFIX" => "inc",	// Суффикс имени файла включаемой области
+		"EDIT_TEMPLATE" => "",	// Шаблон области по умолчанию
+	),
+	false
+);?>
+
 <!-- /side anonse -->
 <!-- side wrap -->
 <div class="side-wrap">
@@ -63,8 +55,8 @@
    <!-- footer rew slider box -->
    <div class="item-wrap">
      <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"rew2", 
+	"bitrix:news.list",
+	"rew2",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.M.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
