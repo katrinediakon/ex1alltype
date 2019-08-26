@@ -33,7 +33,7 @@ $this->setFrameMode(true);
     <div class="name-block"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?echo $arItem["NAME"]?></a></div>
     <div class="pos-block"><?=$arItem["PROPERTIES"]["POSITION"]["VALUE"]?>, <?=$arItem["PROPERTIES"]["COMPANY"]["VALUE"]?></div>
   </div>
-  <div class="text-block"><?=substr( $arItem["PREVIEW_TEXT"],0,120)?>...</div>
+  <div class="text-block"><?=substr( $arItem["PREVIEW_TEXT"],0,150)?>...</div>
 </div>
 </div>
 </div>

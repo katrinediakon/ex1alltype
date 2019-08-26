@@ -33,7 +33,8 @@ $this->setFrameMode(true);
 <div  class="exam-review-item-doc"><img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png"><a href="$arResult['DISPLAY_PROPERTIES']['DOC']["FILE_VALUE"]['SRC']">Файл </a></div>
 <?else:?>
 <?foreach ($arResult['DISPLAY_PROPERTIES']['DOC']["FILE_VALUE"] as $key):?>
-<div  class="exam-review-item-doc"><img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png"><a href="$key['SRC']">Файл </a></div>
+
+<div  class="exam-review-item-doc"><img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png"><a href="<?=$key['SRC']?>">Файл </a></div>
 <?endforeach?>
 <?endif?>
 </div>

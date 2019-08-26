@@ -13,17 +13,16 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-if(file_exists("sect_inc.php")):?>
+if(file_get_contents($arResult["FILE"])):?>
 
 
 <div class="side-block side-anonse">
     <div class="title-block"><span class="i i-title01"></span>Полезная информация!</div>
     <div class="item">
-			<?endif?>
 
 <?if($arResult["FILE"] <> '')
-	include($arResult["FILE"]);
-if(file_exists("sect_inc.php")):?>
+	include($arResult["FILE"]);?>
+
 </div>
 </div>
 <?endif?>

@@ -62,7 +62,7 @@ if($arResult["FORM_TYPE"] == "login"):
 					<input type="submit" name="Login" value="<?=GetMessage("AUTH_LOGIN_BUTTON")?>">
 				</div>
 			</form></li>
-		<li><a href=""><?=GetMessage("AUTH_REGISTER")?></a></li>
+		<li><a href="<?=$arResult["AUTH_REGISTER_URL"]?>"><?=GetMessage("AUTH_REGISTER")?></a></li>
 	</ul>
 </nav>
 <?
